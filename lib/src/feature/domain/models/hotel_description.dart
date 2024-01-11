@@ -4,8 +4,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'hotel_description.g.dart';
 
-HotelDescriptionEntity hotelDescriptionEntityFromJson(List<int> body) =>
-    HotelDescriptionEntity.fromJson(json.decode(utf8.decode(body)));
+HotelDescriptionEntity hotelDescriptionEntityFromJson(String jsonString) =>
+    HotelDescriptionEntity.fromJson(json.decode(jsonString).map((e) => HotelDescriptionEntity.fromJson(e)));
 
 @JsonSerializable()
 class HotelDescriptionEntity {
