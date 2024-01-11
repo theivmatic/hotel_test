@@ -1,6 +1,11 @@
+import 'dart:convert';
+
 import 'package:json_annotation/json_annotation.dart';
 
 part 'hotel_description.g.dart';
+
+HotelDescriptionEntity hotelDescriptionEntityFromJson(List<int> body) =>
+    HotelDescriptionEntity.fromJson(json.decode(utf8.decode(body)));
 
 @JsonSerializable()
 class HotelDescriptionEntity {
@@ -29,6 +34,9 @@ class HotelDescriptionEntity {
       required this.ratingName,
       required this.imageUrls,
       required this.aboutTheHotel});
+
+  factory HotelDescriptionEntity.fromJson(Map<String, dynamic> json) =>
+      _$HotelDescriptionEntityFromJson(json);
 }
 
 @JsonSerializable()
@@ -37,4 +45,7 @@ class AboutTheHotel {
   final List<String>? peculiarities;
 
   AboutTheHotel({required this.description, required this.peculiarities});
+
+  factory AboutTheHotel.fromJson(Map<String, dynamic> json) =>
+      _$AboutTheHotelFromJson(json);
 }
