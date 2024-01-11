@@ -5,9 +5,9 @@ import 'package:meta/meta.dart';
 part 'hotel_description_event.dart';
 part 'hotel_description_state.dart';
 
-class HotelDescriptionBloc extends Bloc<HotelDescriptionEvent, HotelDescriptionState> {
+class HotelDescriptionBloc extends Bloc<HotelDescriptionBlocEvent, HotelDescriptionBlocState> {
   HotelDescriptionBloc() : super(HotelDescriptionInitialState()) {
-    on<HotelDescriptionEvent>((event, emit) {
+    on<HotelDescriptionBlocEvent>((event, emit) {
       // TODO: implement event handler
     });
   }

@@ -1,4 +1,6 @@
 part of 'hotel_description_bloc.dart';
 
 @immutable
-sealed class HotelDescriptionEvent {}
+sealed class HotelDescriptionBlocEvent {}
+
+class FetchHotelDescriptionBlocEvent implements HotelDescriptionBlocEvent {}
