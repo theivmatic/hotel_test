@@ -3,18 +3,18 @@ part of 'hotel_description_bloc.dart';
 @immutable
 sealed class HotelDescriptionBlocState {}
 
-final class HotelDescriptionInitialState extends HotelDescriptionBlocState {}
+final class HotelDescriptionBlocInitialState extends HotelDescriptionBlocState {}
 
-final class HotelDescriptionLoadingState extends HotelDescriptionBlocState {}
+final class HotelDescriptionBlocLoadingState extends HotelDescriptionBlocState {}
 
-final class HotelDescriptionLoadedState extends HotelDescriptionBlocState {
+final class HotelDescriptionBlocLoadedState extends HotelDescriptionBlocState {
   final HotelDescriptionEntity loaded;
 
-  HotelDescriptionLoadedState({required this.loaded});
+  HotelDescriptionBlocLoadedState({required this.loaded});
 }
 
-final class HotelDescriptionErrorState extends HotelDescriptionBlocState {
+final class HotelDescriptionBlocErrorState extends HotelDescriptionBlocState {
   final String errorMessage;
 
-  HotelDescriptionErrorState({required this.errorMessage});
+  HotelDescriptionBlocErrorState({required this.errorMessage});
 }
