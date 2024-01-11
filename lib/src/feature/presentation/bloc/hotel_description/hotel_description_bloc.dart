@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:hotel_test/src/feature/domain/models/hotel_description.dart';
 import 'package:meta/meta.dart';
 
 part 'hotel_description_event.dart';
