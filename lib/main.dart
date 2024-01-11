@@ -10,8 +10,14 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HotelScreen(),
+    return MaterialApp(
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color.fromRGBO(255, 255, 255, 1),
+          elevation: 0,
+        ),
+      ),
+      home: const HotelScreen(),
     );
   }
 }
