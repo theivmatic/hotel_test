@@ -15,7 +15,7 @@ class DataHotelDescriptionApiImpl implements IDataApi {
       headers: {'ContentType': 'applications/json'},
     );
     if (responce.statusCode == 200) {
-      return hotelDescriptionEntityFromJson(responce.body);
+      return hotelDescriptionEntityFromJson(responce.bodyBytes);
     } else {
       throw Exception(
           'Status Code: ${responce.statusCode}, Message: ${responce.reasonPhrase}');

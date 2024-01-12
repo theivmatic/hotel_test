@@ -1,4 +1,4 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_test/src/feature/data/implementations/data_hotel_description_api_impl.dart';
 import 'package:hotel_test/src/feature/domain/models/hotel_description.dart';
 import 'package:meta/meta.dart';
