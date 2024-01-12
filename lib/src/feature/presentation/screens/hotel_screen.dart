@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_test/src/feature/presentation/bloc/hotel_description/hotel_description_bloc.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/hotel_adress_widget.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/hotel_name_widget.dart';
+import 'package:hotel_test/src/feature/presentation/widgets/hotel_peculiarities_widget.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/hotel_price_widget.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/hotel_rating_widget.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/image_carousel_widget.dart';
@@ -42,7 +43,7 @@ class _HotelScreenState extends State<HotelScreen> {
               physics: const BouncingScrollPhysics(),
               children: [
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  padding: const EdgeInsets.all(15),
                   height: 530,
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
@@ -93,7 +94,7 @@ class _HotelScreenState extends State<HotelScreen> {
                 ),
                 const SizedBox(height: 8),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  padding: const EdgeInsets.all(16),
                   height: 530,
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
@@ -102,7 +103,24 @@ class _HotelScreenState extends State<HotelScreen> {
                     ),
                     color: Colors.white,
                   ),
-                  child: const Column(),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Row(
+                        children: [
+                          Text(
+                            'Об отеле',
+                            style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 10,),
+                      HotelPeculiaritiesWidget(peculiarities: state.loaded.aboutTheHotel!.peculiarities,),
+                    ],
+                  ),
                 ),
               ],
             ),
