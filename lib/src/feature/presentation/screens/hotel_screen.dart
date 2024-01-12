@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_test/src/feature/presentation/bloc/hotel_description/hotel_description_bloc.dart';
+import 'package:hotel_test/src/feature/presentation/widgets/hotel_adress_widget.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/hotel_name_widget.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/hotel_rating_widget.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/image_carousel_widget.dart';
@@ -53,6 +54,8 @@ class _HotelScreenState extends State<HotelScreen> {
                   ),
                   //название
                   HotelNameWidget(hotelName: state.loaded.name!,),
+                  //adress
+                  HotelAdressWidget(hotelAdress: state.loaded.adress!,),
                   //стоимость
                 ],
               ),
