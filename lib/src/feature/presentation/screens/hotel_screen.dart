@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_test/src/feature/presentation/bloc/hotel_description/hotel_description_bloc.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/hotel_adress_widget.dart';
+import 'package:hotel_test/src/feature/presentation/widgets/hotel_description_button_widget.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/hotel_name_widget.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/hotel_peculiarities_widget.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/hotel_price_widget.dart';
@@ -117,12 +118,12 @@ class _HotelScreenState extends State<HotelScreen> {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 15),
                       HotelPeculiaritiesWidget(
                         peculiarities:
                             state.loaded.aboutTheHotel!.peculiarities,
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 15),
                       Text(
                         state.loaded.aboutTheHotel!.description!,
                         style: const TextStyle(
@@ -131,6 +132,7 @@ class _HotelScreenState extends State<HotelScreen> {
                           color: Color.fromRGBO(0, 0, 0, 0.9)
                         ),
                       ),
+                      HotelDescriptionButtonWidget(buttonIcon: AssetImage('assets/icons/emoji-happy.png'), buttonText: 'Удобства', buttonSubText: 'Самое необходимое',),
                     ],
                   ),
                 ),
