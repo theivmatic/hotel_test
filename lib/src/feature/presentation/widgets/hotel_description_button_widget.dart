@@ -3,13 +3,12 @@ import 'package:flutter/material.dart';
 class HotelDescriptionButtonWidget extends StatelessWidget {
   final dynamic buttonIcon;
   final String buttonText;
-  final String buttonSubText;
 
-  const HotelDescriptionButtonWidget(
-      {super.key,
-      required this.buttonIcon,
-      required this.buttonText,
-      required this.buttonSubText});
+  const HotelDescriptionButtonWidget({
+    super.key,
+    required this.buttonIcon,
+    required this.buttonText,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,9 +31,10 @@ class HotelDescriptionButtonWidget extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              Text(
-                buttonSubText,
-                style: const TextStyle(
+              const SizedBox(height: 5),
+              const Text(
+                'Самое необходимое',
+                style: TextStyle(
                   color: Color.fromRGBO(130, 135, 150, 1),
                   fontSize: 14,
                   fontWeight: FontWeight.w500,

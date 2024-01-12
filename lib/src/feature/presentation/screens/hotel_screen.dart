@@ -45,7 +45,6 @@ class _HotelScreenState extends State<HotelScreen> {
               children: [
                 Container(
                   padding: const EdgeInsets.all(15),
-                  height: 530,
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(12),
@@ -96,7 +95,6 @@ class _HotelScreenState extends State<HotelScreen> {
                 const SizedBox(height: 8),
                 Container(
                   padding: const EdgeInsets.all(16),
-                  height: 530,
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(12),
@@ -127,12 +125,44 @@ class _HotelScreenState extends State<HotelScreen> {
                       Text(
                         state.loaded.aboutTheHotel!.description!,
                         style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          color: Color.fromRGBO(0, 0, 0, 0.9)
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            color: Color.fromRGBO(0, 0, 0, 0.9)),
+                      ),
+                      const SizedBox(height: 15),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: const Color.fromRGBO(251, 251, 252, 1),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: const Column(
+                          children: [
+                            HotelDescriptionButtonWidget(
+                              buttonIcon:
+                                  AssetImage('assets/icons/emoji-happy.png'),
+                              buttonText: 'Удобства',
+                            ),
+                            Divider(
+                              indent: 34,
+                              endIndent: 34,
+                            ),
+                            HotelDescriptionButtonWidget(
+                              buttonIcon:
+                                  AssetImage('assets/icons/tick-square.png'),
+                              buttonText: 'Что включено',
+                            ),
+                            Divider(
+                              indent: 34,
+                              endIndent: 34,
+                            ),
+                            HotelDescriptionButtonWidget(
+                              buttonIcon:
+                                  AssetImage('assets/icons/close-square.png'),
+                              buttonText: 'Что не включено',
+                            ),
+                          ],
                         ),
                       ),
-                      HotelDescriptionButtonWidget(buttonIcon: AssetImage('assets/icons/emoji-happy.png'), buttonText: 'Удобства', buttonSubText: 'Самое необходимое',),
                     ],
                   ),
                 ),
