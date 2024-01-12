@@ -34,6 +34,7 @@ class HotelRatingWidget extends StatelessWidget {
                     color: Color.fromRGBO(255, 168, 0, 1),
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
+                    fontFamily: 'SF-Pro-Display'
                   ),
                 ),
               ],

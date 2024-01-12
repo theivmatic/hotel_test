@@ -13,7 +13,11 @@ class HotelPriceWidget extends StatelessWidget {
       children: [
         Text(
           'от $minialPrice ₽',
-          style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+          style: const TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.w600,
+            fontFamily: 'SF-Pro-Display'
+          ),
         ),
         const SizedBox(
           width: 10,
@@ -21,10 +25,10 @@ class HotelPriceWidget extends StatelessWidget {
         Text(
           priceForIt,
           style: const TextStyle(
-            color: Color.fromRGBO(130, 135, 150, 1),
-            fontSize: 16,
-            fontWeight: FontWeight.w400,
-          ),
+              color: Color.fromRGBO(130, 135, 150, 1),
+              fontSize: 16,
+              fontWeight: FontWeight.w400,
+              fontFamily: 'SF-Pro-Display'),
         ),
       ],
     );

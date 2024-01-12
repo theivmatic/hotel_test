@@ -12,6 +12,7 @@ class HotelNameWidget extends StatelessWidget {
       style: const TextStyle(
         fontSize: 22,
         fontWeight: FontWeight.w500,
+        fontFamily: 'SF-Pro-Display'
       ),
     );
   }

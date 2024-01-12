@@ -30,13 +30,6 @@ class _HotelScreenState extends State<HotelScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text(
-      //     'Отель',
-      //     style: TextStyle(color: Colors.black),
-      //   ),
-      //   centerTitle: true,
-      // ),
       backgroundColor: const Color.fromRGBO(246, 246, 246, 1),
       body: BlocBuilder<HotelDescriptionBloc, HotelDescriptionBlocState>(
         bloc: hotelDescriptionBloc,
@@ -61,6 +54,7 @@ class _HotelScreenState extends State<HotelScreen> {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
+                            fontFamily: 'SF-Pro-Display'
                           ),
                         ),
                       ),
@@ -113,6 +107,7 @@ class _HotelScreenState extends State<HotelScreen> {
                             style: TextStyle(
                               fontSize: 22,
                               fontWeight: FontWeight.w500,
+                              fontFamily: 'SF-Pro-Display'
                             ),
                           ),
                         ],

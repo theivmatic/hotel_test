@@ -24,6 +24,7 @@ class HotelPeculiaritiesWidget extends StatelessWidget {
                 color: Color.fromRGBO(130, 135, 150, 1),
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
+                fontFamily: 'SF-Pro-Display'
               ),
             ),
           ),
@@ -42,6 +43,7 @@ class HotelPeculiaritiesWidget extends StatelessWidget {
                 color: Color.fromRGBO(130, 135, 150, 1),
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
+                fontFamily: 'SF-Pro-Display'
               ),
             ),
           ),
@@ -60,6 +62,7 @@ class HotelPeculiaritiesWidget extends StatelessWidget {
                 color: Color.fromRGBO(130, 135, 150, 1),
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
+                fontFamily: 'SF-Pro-Display'
               ),
             ),
           ),
@@ -78,6 +81,7 @@ class HotelPeculiaritiesWidget extends StatelessWidget {
                 color: Color.fromRGBO(130, 135, 150, 1),
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
+                fontFamily: 'SF-Pro-Display'
               ),
             ),
           ),

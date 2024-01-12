@@ -29,6 +29,7 @@ class HotelDescriptionButtonWidget extends StatelessWidget {
                   color: Color.fromRGBO(44, 48, 53, 1),
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
+                  fontFamily: 'SF-Pro-Display'
                 ),
               ),
               const SizedBox(height: 5),
@@ -38,6 +39,7 @@ class HotelDescriptionButtonWidget extends StatelessWidget {
                   color: Color.fromRGBO(130, 135, 150, 1),
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
+                  fontFamily: 'SF-Pro-Display'
                 ),
               ),
             ],
