@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_carousel_slider/flutter_custom_carousel_slider.dart';
 
-class ImageCarouselWiidget extends StatefulWidget {
-  // final String imageUrlOne;
+class ImageCarouselWidget extends StatefulWidget {
+  final String imageUrlOne;
   // final String imageUrlTwo;
   // final String imageUrlThree;
-  const ImageCarouselWiidget(
+  const ImageCarouselWidget(
       {super.key,
-      // required this.imageUrlOne,
+      required this.imageUrlOne,
       // required this.imageUrlTwo,
       // required this.imageUrlThree
       });
 
   @override
-  State<ImageCarouselWiidget> createState() => _ImageCarouselWiidgetState();
+  State<ImageCarouselWidget> createState() => _ImageCarouselWidgetState();
 }
 
-class _ImageCarouselWiidgetState extends State<ImageCarouselWiidget> {
+class _ImageCarouselWidgetState extends State<ImageCarouselWidget> {
   List<CarouselItem> itemList = [
     CarouselItem(
-      image: const NetworkImage(''),
+      image: NetworkImage(''),
       onImageTap: (i) {},
     ),
     CarouselItem(
@@ -34,15 +34,10 @@ class _ImageCarouselWiidgetState extends State<ImageCarouselWiidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      // ignore: avoid_unnecessary_containers
-      child: Container(
-        child: CustomCarouselSlider(
-          items: itemList,
-          height: 250,
-          autoplay: false,
-        ),
-      ),
+    return CustomCarouselSlider(
+      items: itemList,
+      height: 250,
+      autoplay: false,
     );
   }
 }

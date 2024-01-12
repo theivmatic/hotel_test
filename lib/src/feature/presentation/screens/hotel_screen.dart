@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_test/src/feature/presentation/bloc/hotel_description/hotel_description_bloc.dart';
-import 'package:hotel_test/src/feature/presentation/widgets/hotel_adress_widget.dart';
-import 'package:hotel_test/src/feature/presentation/widgets/hotel_description_button_widget.dart';
-import 'package:hotel_test/src/feature/presentation/widgets/hotel_name_widget.dart';
+import 'package:hotel_test/src/feature/presentation/widgets/bottom_button.dart';
+import 'package:hotel_test/src/feature/presentation/widgets/hotel_adress.dart';
+import 'package:hotel_test/src/feature/presentation/widgets/hotel_description_button.dart';
+import 'package:hotel_test/src/feature/presentation/widgets/hotel_name.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/hotel_peculiarities_widget.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/hotel_price_widget.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/hotel_rating_widget.dart';
@@ -64,11 +65,11 @@ class _HotelScreenState extends State<HotelScreen> {
                         ),
                       ),
                       //карусель
-                      const ImageCarouselWiidget(
-                          // imageUrlOne: state.loaded.imageUrls![0],
-                          // imageUrlTwo: state.loaded.imageUrls![1],
-                          // imageUrlThree: state.loaded.imageUrls![2],
-                          ),
+                      ImageCarouselWidget(
+                        imageUrlOne: state.loaded.imageUrls![0],
+                        // imageUrlTwo: state.loaded.imageUrls![1],
+                        // imageUrlThree: state.loaded.imageUrls![2],
+                      ),
                       //рейтинг
                       const SizedBox(height: 20),
                       HotelRatingWidget(
@@ -129,7 +130,7 @@ class _HotelScreenState extends State<HotelScreen> {
                             fontWeight: FontWeight.w400,
                             color: Color.fromRGBO(0, 0, 0, 0.9)),
                       ),
-                      const SizedBox(height: 15),
+                      const SizedBox(height: 25),
                       Container(
                         decoration: BoxDecoration(
                           color: const Color.fromRGBO(251, 251, 252, 1),
@@ -164,6 +165,21 @@ class _HotelScreenState extends State<HotelScreen> {
                         ),
                       ),
                     ],
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(15),
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      top: BorderSide(
+                        color: Color.fromRGBO(232, 233, 236, 1),
+                        width: 1,
+                      ),
+                    ),
+                    color: Colors.white,
+                  ),
+                  child: const BottomButtonWidget(
+                    buttonText: 'К выбору номера',
                   ),
                 ),
               ],
