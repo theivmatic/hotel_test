@@ -14,6 +14,7 @@ class HotelAdressWidget extends StatelessWidget {
         style: const TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w500,
+          color: Color.fromRGBO(13, 114, 255, 1),
         ),
       ),
     );

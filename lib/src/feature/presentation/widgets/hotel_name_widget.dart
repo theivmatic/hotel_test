@@ -9,7 +9,7 @@ class HotelNameWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       hotelName,
-      style: TextStyle(
+      style: const TextStyle(
         fontSize: 22,
         fontWeight: FontWeight.w500,
       ),

@@ -35,6 +35,7 @@ class _ImageCarouselWiidgetState extends State<ImageCarouselWiidget> {
   @override
   Widget build(BuildContext context) {
     return Center(
+      // ignore: avoid_unnecessary_containers
       child: Container(
         child: CustomCarouselSlider(
           items: itemList,
