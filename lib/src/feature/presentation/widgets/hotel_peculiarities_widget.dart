@@ -22,6 +22,8 @@ class HotelPeculiaritiesWidget extends StatelessWidget {
               peculiarities[0],
               style: const TextStyle(
                 color: Color.fromRGBO(130, 135, 150, 1),
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ),
@@ -38,6 +40,8 @@ class HotelPeculiaritiesWidget extends StatelessWidget {
               peculiarities[1],
               style: const TextStyle(
                 color: Color.fromRGBO(130, 135, 150, 1),
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ),
@@ -54,6 +58,8 @@ class HotelPeculiaritiesWidget extends StatelessWidget {
               peculiarities[2],
               style: const TextStyle(
                 color: Color.fromRGBO(130, 135, 150, 1),
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ),
@@ -70,6 +76,8 @@ class HotelPeculiaritiesWidget extends StatelessWidget {
               peculiarities[3],
               style: const TextStyle(
                 color: Color.fromRGBO(130, 135, 150, 1),
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ),

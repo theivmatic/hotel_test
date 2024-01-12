@@ -117,8 +117,20 @@ class _HotelScreenState extends State<HotelScreen> {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 10,),
-                      HotelPeculiaritiesWidget(peculiarities: state.loaded.aboutTheHotel!.peculiarities,),
+                      const SizedBox(height: 10),
+                      HotelPeculiaritiesWidget(
+                        peculiarities:
+                            state.loaded.aboutTheHotel!.peculiarities,
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        state.loaded.aboutTheHotel!.description!,
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromRGBO(0, 0, 0, 0.9)
+                        ),
+                      ),
                     ],
                   ),
                 ),
