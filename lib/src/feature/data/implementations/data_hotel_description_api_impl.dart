@@ -1,8 +1,8 @@
-import 'package:hotel_test/src/feature/domain/interfaces/data_api.dart';
+import 'package:hotel_test/src/feature/domain/interfaces/data_hotel_description_api.dart';
 import 'package:hotel_test/src/feature/domain/models/hotel_description/hotel_description.dart';
 import 'package:http/http.dart' as http;
 
-class DataHotelDescriptionApiImpl implements IDataApi {
+class DataHotelDescriptionApiImpl implements IDataHotelDescriptionApi {
   final http.Client? _client;
 
   DataHotelDescriptionApiImpl({http.Client? client})
