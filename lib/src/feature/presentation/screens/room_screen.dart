@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hotel_test/src/core/routes/app_router.gr.dart';
 import 'package:hotel_test/src/feature/presentation/bloc/room/room_bloc.dart';
 
 @RoutePage()
@@ -23,15 +24,39 @@ class _RoomScreenState extends State<RoomScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BlocBuilder<RoomBloc, RoomBlocState>(
-        bloc: roomBloc,
-        builder: (context, state) => switch (state) {
-          RoomBlocLoadedState => const SizedBox(),
-          RoomBlocLoadingState => const SizedBox(),
-          RoomBlocErrorState => const SizedBox(),
-          _ => const Placeholder(),
-        }
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            context.popRoute(const HotelRoute());
+          },
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.black,),
         ),
+        title: const Text(''),
+      ),
+      backgroundColor: const Color.fromRGBO(246, 246, 246, 1),
+      body: BlocBuilder<RoomBloc, RoomBlocState>(
+          bloc: roomBloc,
+          builder: (context, state) => switch (state) {
+                RoomBlocLoadedState() => ListView(
+                    physics: const BouncingScrollPhysics(),
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(15),
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(12),
+                            bottomRight: Radius.circular(12),
+                          ),
+                          color: Colors.white,
+                        ),
+                        child: const Column(),
+                      ),
+                    ],
+                  ),
+                RoomBlocLoadingState() => const SizedBox(),
+                RoomBlocErrorState() => const SizedBox(),
+                _ => const Placeholder(),
+              }),
     );
   }
 }
