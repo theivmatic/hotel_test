@@ -1,20 +1,27 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'room.g.dart';
+
+@JsonSerializable()
 class RoomEntity {
-  final List<Room> rooms;
+  final List<Room>? rooms;
 
   RoomEntity({required this.rooms});
+
+  factory RoomEntity.fromJson(Map<String, dynamic> json) =>
+      _$RoomEntityFromJson(json);
 }
 
+@JsonSerializable()
 class Room {
-  final int id;
-  final String name;
-  final int price;
+  final int? id;
+  final String? name;
+  final int? price;
   @JsonKey(name: 'price_per')
-  final String pricePer;
-  final List<String> peculiarities;
+  final String? pricePer;
+  final List<String>? peculiarities;
   @JsonKey(name: 'image_urls')
-  final List<String> imageUrls;
+  final List<String>? imageUrls;
 
   Room(
       {required this.id,
@@ -23,4 +30,6 @@ class Room {
       required this.pricePer,
       required this.peculiarities,
       required this.imageUrls});
+
+  factory Room.fromJson(Map<String, dynamic> json) => _$RoomFromJson(json);
 }
