@@ -1,6 +1,12 @@
+import 'dart:convert';
+
 import 'package:json_annotation/json_annotation.dart';
 
 part 'room.g.dart';
+
+RoomEntity hotelDescriptionEntityFromJson(List<int> body) =>
+    RoomEntity.fromJson(json.decode(utf8.decode(body)));
+
 
 @JsonSerializable()
 class RoomEntity {
