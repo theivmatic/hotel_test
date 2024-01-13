@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_test/src/feature/presentation/bloc/hotel_description/hotel_description_bloc.dart';
@@ -10,6 +11,7 @@ import 'package:hotel_test/src/feature/presentation/widgets/hotel_price_widget.d
 import 'package:hotel_test/src/feature/presentation/widgets/hotel_rating_widget.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/image_carousel_widget.dart';
 
+@RoutePage()
 class HotelScreen extends StatefulWidget {
   const HotelScreen({super.key});
 
