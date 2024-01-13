@@ -1,4 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:hotel_test/src/core/routes/app_router.gr.dart';
 
 class BottomButtonWidget extends StatelessWidget {
   final String buttonText;
@@ -14,14 +16,15 @@ class BottomButtonWidget extends StatelessWidget {
           Color.fromRGBO(13, 114, 255, 1),
         ),
       ),
-      onPressed: () {},
+      onPressed: () {
+        context.pushRoute(const RoomRoute());
+      },
       child: Text(
         buttonText,
         style: const TextStyle(
-          fontSize: 16,
-          fontWeight: FontWeight.w500,
-          fontFamily: 'SF-Pro-Display'
-        ),
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            fontFamily: 'SF-Pro-Display'),
       ),
     );
   }
