@@ -3,18 +3,18 @@ part of 'room_bloc.dart';
 @immutable
 sealed class RoomBlocState {}
 
-final class RoomInitialBlocState extends RoomBlocState {}
+final class RoomBlocInitialState extends RoomBlocState {}
 
-final class RoomLoadingBlocState extends RoomBlocState {}
+final class RoomBlocLoadingState extends RoomBlocState {}
 
-final class RoomLoadedBlocState extends RoomBlocState {
+final class RoomBlocLoadedState extends RoomBlocState {
   final RoomEntity loaded;
 
-  RoomLoadedBlocState({required this.loaded});
+  RoomBlocLoadedState({required this.loaded});
 }
 
-final class RoomErrorBlocState extends RoomBlocState {
+final class RoomBlocErrorState extends RoomBlocState {
   final String errorMessage;
 
-  RoomErrorBlocState({required this.errorMessage});
+  RoomBlocErrorState({required this.errorMessage});
 }

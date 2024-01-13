@@ -1,4 +1,6 @@
 part of 'room_bloc.dart';
 
 @immutable
-sealed class RoomEvent {}
+sealed class RoomBlocEvent {}
+
+class FetchRoomBlocEvent implements RoomBlocEvent {}
