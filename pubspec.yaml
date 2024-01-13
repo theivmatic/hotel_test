@@ -14,6 +14,7 @@ dependencies:
   http: ^1.1.0
   flutter_custom_carousel_slider: ^1.2.0
   meta: ^1.9.1
+  auto_route: ^7.8.4
 
 dev_dependencies:
   flutter_test:
@@ -21,6 +22,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   build_runner: ^2.4.7
   json_serializable: ^6.7.1
+  auto_route_generator: ^7.3.2
 
 flutter:
   uses-material-design: true

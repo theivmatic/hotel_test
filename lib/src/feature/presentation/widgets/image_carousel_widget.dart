@@ -19,7 +19,7 @@ class ImageCarouselWidget extends StatefulWidget {
 class _ImageCarouselWidgetState extends State<ImageCarouselWidget> {
   List<CarouselItem> itemList = [
     CarouselItem(
-      image: NetworkImage(''),
+      image: const NetworkImage(''),
       onImageTap: (i) {},
     ),
     CarouselItem(
