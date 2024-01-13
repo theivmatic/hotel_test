@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_test/src/core/routes/app_router.dart';
 import 'package:hotel_test/src/feature/presentation/bloc/hotel_description/hotel_description_bloc.dart';
 import 'package:hotel_test/src/feature/presentation/bloc/hotel_description/observer.dart';
+import 'package:hotel_test/src/feature/presentation/bloc/room/room_bloc.dart';
 
 void main() {
   Bloc.observer = AppObserver();
@@ -14,8 +15,15 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => HotelDescriptionBloc(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => HotelDescriptionBloc(),
+        ),
+        BlocProvider(
+          create: (context) => RoomBloc(),
+        ),
+      ],
       child: MaterialApp.router(
         theme: ThemeData(
           appBarTheme: const AppBarTheme(
