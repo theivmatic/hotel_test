@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_test/src/core/routes/app_router.gr.dart';
 import 'package:hotel_test/src/feature/presentation/bloc/room/room_bloc.dart';
+import 'package:hotel_test/src/feature/presentation/widgets/bottom_button.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/hotel_peculiarities_widget.dart';
+import 'package:hotel_test/src/feature/presentation/widgets/hotel_price_widget.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/image_carousel_widget.dart';
 
 @RoutePage()
@@ -66,7 +68,8 @@ class _RoomScreenState extends State<RoomScreen> {
                               onPressed: () {},
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: const Color.fromRGBO(13, 114, 255, 0.1),
+                                  color:
+                                      const Color.fromRGBO(13, 114, 255, 0.1),
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: const Row(
@@ -113,6 +116,15 @@ class _RoomScreenState extends State<RoomScreen> {
                             //     ],
                             //   ),
                             // ),
+                            HotelPriceWidget(
+                              minialPrice:
+                                  state.loaded.rooms!.roomsList!.price!,
+                              priceForIt:
+                                  state.loaded.rooms!.roomsList!.pricePer!,
+                            ),
+                            const BottomButtonWidget(
+                              buttonText: 'Выбрать номер',
+                            ),
                           ],
                         ),
                       ),
