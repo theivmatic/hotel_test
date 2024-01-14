@@ -164,6 +164,7 @@ class _HotelScreenState extends State<HotelScreen> {
                     ],
                   ),
                 ),
+                const SizedBox(height: 8),
                 Container(
                   padding: const EdgeInsets.all(15),
                   decoration: const BoxDecoration(

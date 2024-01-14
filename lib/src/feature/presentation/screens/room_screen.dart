@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_test/src/core/routes/app_router.gr.dart';
 import 'package:hotel_test/src/feature/presentation/bloc/room/room_bloc.dart';
+import 'package:hotel_test/src/feature/presentation/widgets/hotel_peculiarities_widget.dart';
 import 'package:hotel_test/src/feature/presentation/widgets/image_carousel_widget.dart';
 
 @RoutePage()
@@ -56,7 +57,62 @@ class _RoomScreenState extends State<RoomScreen> {
                         child: Column(
                           children: [
                             const ImageCarouselWidget(imageUrlOne: ''),
-                            Text(state.loaded.rooms!.roomsList!.name.toString()),
+                            Text(
+                                state.loaded.rooms!.roomsList!.name.toString()),
+                            HotelPeculiaritiesWidget(
+                                peculiarities: state
+                                    .loaded.rooms!.roomsList!.peculiarities),
+                            TextButton(
+                              onPressed: () {},
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: const Color.fromRGBO(13, 114, 255, 0.1),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: const Row(
+                                  children: [
+                                    Text(
+                                      'Подробнее о номере',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(13, 114, 255, 1),
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500,
+                                        fontFamily: 'SF-Pro-Display',
+                                      ),
+                                    ),
+                                    Icon(
+                                      Icons.arrow_forward_ios,
+                                      color: Color.fromRGBO(13, 114, 255, 1),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            // FilledButton(
+                            //   onPressed: () {},
+                            //   style: const ButtonStyle(
+                            //     backgroundColor: MaterialStatePropertyAll(
+                            //       Color.fromRGBO(13, 114, 255, 0.1),
+                            //     ),
+                            //   ),
+                            //   child: const Row(
+                            //     children: [
+                            //       Text(
+                            //         'Подробнее о номере',
+                            //         style: TextStyle(
+                            //           color: Color.fromRGBO(13, 114, 255, 1),
+                            //           fontSize: 16,
+                            //           fontWeight: FontWeight.w500,
+                            //           fontFamily: 'SF-Pro-Display',
+                            //         ),
+                            //       ),
+                            //       Icon(
+                            //         Icons.arrow_forward_ios,
+                            //         color: Color.fromRGBO(13, 114, 255, 1),
+                            //       ),
+                            //     ],
+                            //   ),
+                            // ),
                           ],
                         ),
                       ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_test/src/core/routes/app_router.dart';
 import 'package:hotel_test/src/feature/presentation/bloc/hotel_description/hotel_description_bloc.dart';
-import 'package:hotel_test/src/feature/presentation/bloc/hotel_description/observer.dart';
+import 'package:hotel_test/src/feature/presentation/bloc/observer.dart';
 import 'package:hotel_test/src/feature/presentation/bloc/room/room_bloc.dart';
 
 void main() {
