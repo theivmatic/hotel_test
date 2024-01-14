@@ -9,14 +9,24 @@ part of 'room.dart';
 // **************************************************************************
 
 RoomEntity _$RoomEntityFromJson(Map<String, dynamic> json) => RoomEntity(
-      rooms: (json['rooms'] as List<dynamic>?)
-          ?.map((e) => Room.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      rooms: json['rooms'] == null
+          ? null
+          : RoomList.fromJson(json['rooms'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$RoomEntityToJson(RoomEntity instance) =>
     <String, dynamic>{
       'rooms': instance.rooms,
+    };
+
+RoomList _$RoomListFromJson(Map<String, dynamic> json) => RoomList(
+      roomsList: json['roomsList'] == null
+          ? null
+          : Room.fromJson(json['roomsList'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$RoomListToJson(RoomList instance) => <String, dynamic>{
+      'roomsList': instance.roomsList,
     };
 
 Room _$RoomFromJson(Map<String, dynamic> json) => Room(

@@ -7,15 +7,24 @@ part 'room.g.dart';
 RoomEntity roomEntityFromJson(List<int> body) =>
     RoomEntity.fromJson(json.decode(utf8.decode(body)));
 
-
 @JsonSerializable()
 class RoomEntity {
-  final List<Room>? rooms;
+  final RoomList? rooms;
 
   RoomEntity({required this.rooms});
 
   factory RoomEntity.fromJson(Map<String, dynamic> json) =>
       _$RoomEntityFromJson(json);
+}
+
+@JsonSerializable()
+class RoomList {
+  final Room? roomsList;
+
+  RoomList({required this.roomsList});
+
+  factory RoomList.fromJson(Map<String, dynamic> json) =>
+      _$RoomListFromJson(json);
 }
 
 @JsonSerializable()

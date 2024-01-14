@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_test/src/core/routes/app_router.gr.dart';
 import 'package:hotel_test/src/feature/presentation/bloc/room/room_bloc.dart';
+import 'package:hotel_test/src/feature/presentation/widgets/image_carousel_widget.dart';
 
 @RoutePage()
 class RoomScreen extends StatefulWidget {
@@ -29,7 +30,10 @@ class _RoomScreenState extends State<RoomScreen> {
           onPressed: () {
             context.popRoute(const HotelRoute());
           },
-          icon: const Icon(Icons.arrow_back_ios, color: Colors.black,),
+          icon: const Icon(
+            Icons.arrow_back_ios,
+            color: Colors.black,
+          ),
         ),
         title: const Text(''),
       ),
@@ -49,7 +53,12 @@ class _RoomScreenState extends State<RoomScreen> {
                           ),
                           color: Colors.white,
                         ),
-                        child: const Column(),
+                        child: Column(
+                          children: [
+                            const ImageCarouselWidget(imageUrlOne: ''),
+                            Text(state.loaded.rooms!.roomsList!.name.toString()),
+                          ],
+                        ),
                       ),
                     ],
                   ),
